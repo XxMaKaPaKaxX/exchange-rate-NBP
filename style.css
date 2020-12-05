@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+div.widget {
+    position: absolute;
+    min-width: 230px;
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px black solid;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+}
+
+
+div.head {
+    position: relative;
+    background-color: #0664f9;
+    height: 20%;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 75px;
+}
+
+div.head>div.roll_icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.fa-window-close.closed {
+    display: none;
+}
+
+.fa-arrow-circle-down.closed {
+    display: none;
+}
+
+
+div.exchange__rates {
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding-left: 5px;
+    min-height: 150px;
+}
+
+div.exchange__rates.closed {
+    display: none;
+}
+
+.exchange__rates>div {
+    flex-basis: 80%;
+    font-size: 20px;
+
+}
+
+div.currency__converter {
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    min-height: 150px;
+}
+
+div.currency__converter.closed {
+    display: none;
+}
+
+#selectCurrency {
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+#currency__amount {
+    flex-basis: 40%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#btnCalculate {
+    flex-basis: 90%;
+    flex-grow: 1;
+    text-transform: uppercase;
+
+}
+
+#result {
+    flex-basis: 90%;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

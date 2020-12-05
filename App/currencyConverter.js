@@ -1,9 +1,11 @@
-const currencyConverter  = () => {
-    const currencylist = document.querySelector('#selectCurrency');
+const currencylist = document.querySelector('#selectCurrency');
+const btnCalculate = document.querySelector('#btnCalculate');
+const resultWindow = document.querySelector('#result');
+
+const currencyConverter  = () => {    
     const amountForChange = Number(document.querySelector('#currency__amount').value);
     const selectedCurency = currencylist.value;
-    let rateOfselectedCurency;
-    
+    let rateOfselectedCurency;    
     
     switch (selectedCurency) {
         case 'USD':
@@ -21,10 +23,9 @@ const currencyConverter  = () => {
 
     console.log(selectedCurency, amountForChange, rateOfselectedCurency)
     const result = (amountForChange * rateOfselectedCurency).toFixed(2);
-    resultWindow.value = `${result} zł`;
+    resultWindow.textContent = `${result} zł`;
 }
 
-const btnCalculate = document.querySelector('#btnCalculate');
-const resultWindow = document.querySelector('#result');
+
 
 btnCalculate.addEventListener('click', currencyConverter);

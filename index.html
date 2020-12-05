@@ -4,27 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="calculator">
-        <select id="selectCurrency">
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="RUB">RUB</option>
-            <option value="UAH">UAH</option>
-        </select>
-        <input type="number" name="" id="currency__amount" placeholder="podaj kwotę">
-        <input type="button" value="oblicz" id="btnCalculate">
-        <input type="text" id="result">
+    <div class="widget">
+        <div class="head">
+            <h3>NBP Exchage rates</h3>
+            <div class="roll_icons">
+
+                <i class="far fa-window-close"></i>
+                <i class="fas fa-arrow-circle-down closed"></i>
+            </div>
+            
+        </div>
+
+
+        <div class="exchange__rates">
+            <div class="">
+                <i class="fas fa-dollar-sign"></i>
+                <span class="dollar__rate"></span>
+            </div>
+            <div class="">
+                <i class="fas fa-euro-sign"></i>
+                <span class="euro__rate"></span>
+            </div>
+            <div class="">
+                <i class="fas fa-ruble-sign"></i>
+                <span class="rubl__rate"></span>
+            </div>
+            <div class="">
+                <i class="fas fa-hryvnia"></i>
+                <span class="hryvnia__rate"></span>
+            </div>
+
+        </div>
+
+        <div class="currency__converter">
+            <select id="selectCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="RUB">RUB</option>
+                <option value="UAH">UAH</option>
+            </select>
+            <input type="number" name="" id="currency__amount" placeholder="podaj kwotę">
+            <input type="button" value="oblicz" id="btnCalculate">
+            <div id="result"> </div>
+
+        </div>
     </div>
-
-
-
 
     <script src="./App/NBPrates.js"></script>
     <script src="./App/currencyConverter.js"></script>
     <script src="main.js"></script>
+    <script src="./App/widgetMoving.js"></script>
+    <script src="./App/roll.js"></script>
     
 </body>
 </html>
