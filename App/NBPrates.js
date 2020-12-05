@@ -7,7 +7,7 @@ const  ratesNBP = {
     getInterestedRates:  () => {
         const xhr = new XMLHttpRequest();   
 
-        xhr.open('GET', 'http://api.nbp.pl/api/exchangerates/tables/a/', false);
+        xhr.open('GET', 'https://api.nbp.pl/api/exchangerates/tables/a/', false);
         xhr.send(null);
         ratesNBP.interestedRates = JSON.parse(xhr.response)[0].rates
         .filter(curency => interestedCurency.includes(curency.code));
