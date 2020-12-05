@@ -13,10 +13,10 @@ const currencyConverter  = () => {
             rateOfselectedCurency = euro.mid;
             break
         case 'RUB':
-            crateOfselectedCurency = rubl.mid;
+            rateOfselectedCurency = rubl.mid;
           break;
         default:
-            crateOfselectedCurency = hryvnia.mid;
+          rateOfselectedCurency = hryvnia.mid;
       }
 
     console.log(selectedCurency, amountForChange, rateOfselectedCurency)
