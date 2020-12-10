@@ -1,4 +1,6 @@
-/* let drawActive = false;
+/* 
+const widget = document.querySelector('.widget');
+let drawActive = false;
 
 let divX;
 let divY;

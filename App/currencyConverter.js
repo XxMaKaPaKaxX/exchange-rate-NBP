@@ -19,9 +19,7 @@ const currencyConverter  = () => {
           break;
         default:
           rateOfselectedCurency = hryvnia.mid;
-      }
-
-    console.log(selectedCurency, amountForChange, rateOfselectedCurency)
+    }
     const result = (amountForChange * rateOfselectedCurency).toFixed(2);
     resultWindow.textContent = `${result} zł`;
 }

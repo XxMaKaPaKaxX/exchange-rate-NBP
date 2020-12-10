@@ -4,15 +4,6 @@ const  ratesNBP = {
     name: "NBP",
     interestedRates: [],
 
-    getInterestedRates:  () => {
-        const xhr = new XMLHttpRequest();   
-
-        xhr.open('GET', 'https://api.nbp.pl/api/exchangerates/tables/a/', false);
-        xhr.send(null);
-        ratesNBP.interestedRates = JSON.parse(xhr.response)[0].rates
-        .filter(curency => interestedCurency.includes(curency.code));
-    },
-
     getDolarExchangeRate: () => {
         const dolar = ratesNBP.interestedRates.find(curency => curency.code === 'USD')
         return dolar;
