@@ -1,11 +1,13 @@
 const nbpUrl = 'https://api.nbp.pl/api/exchangerates/tables/a/';
+const timeOfRefresh = 10000; // in miliseconds
 
 let dolar;
 let euro;
 let rubl;
 let hryvnia;
 
-fetch(nbpUrl)
+const getRates = () => {
+    fetch(nbpUrl)
     .then(response => {
         return response.json()
     })
@@ -21,4 +23,6 @@ fetch(nbpUrl)
         document.querySelector('.rubl__rate').textContent = `= ${rubl.mid} zł`;
         document.querySelector('.hryvnia__rate').textContent = `= ${hryvnia.mid} zł`;
     })
-
+} 
+getRates();
+setInterval(() => getRates(), timeOfRefresh);
