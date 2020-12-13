@@ -5,3 +5,5 @@
 It is a widget which presents information about current exchange rates. The data download from NBP is asynchronous. The rates refresh each 10 sec automatically. Currency exchange function has also been implemented. 
 
 You can see this project on my [GitHub Pages](https://xxmakapakaxx.github.io/exchange-rate-NBP/)
+
+![alt text](./img/widgetScreen.png)
